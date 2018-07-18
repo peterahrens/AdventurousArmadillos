@@ -36,7 +36,7 @@ endif
 
 CXX = CC
 LINK = ${CXX}
-CXXFLAGS=-O3 -hlist=a
+CXXFLAGS=-O3
 
 ifeq ($(VER), OpenACC)
     CXXFLAGS+=-h pragma=acc
@@ -44,10 +44,10 @@ endif
 
 OBJ = $(SRC:.cpp=.o)
 
-$(EXE): $(OBJ)  
+$(EXE): $(OBJ)
 	$(CXX) $(OBJ) -o $(EXE) $(LINKFLAGS)
 
-$(OBJ1): $(SRC) 
+$(OBJ): $(SRC)
 	$(CXX) -c $(SRC) $(CXXFLAGS)
 
 clean: 
