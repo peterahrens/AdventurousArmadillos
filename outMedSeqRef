@@ -1,0 +1,15 @@
+rm: cannot remove `/lustre/atlas/scratch/pahrens/csc261/gppKerSeq.ex': No such file or directory
+Wed Jul 18 16:14:36 EDT 2018
+The commands we run are:
+export OMP_NUM_THREADS=1
+aprun -n 1 -d 1 ./gppKerSeq.ex 512 2 1600 20
+*********************************************************************************
+number_bands = 512	 nvband = 2	 ncouls = 1600	 nodes_per_group  = 20	 ngpown = 80	 nend = 3	 nstart = 0	 gamma = 0.5	 sexcut = 4	 limitone = 250000	 limittwo = 0.25
+Size of wtilde_array = 1.95312 Mbytes
+Size of aqsntemp = 12.5 Mbytes
+Size of I_eps_array array = 1.95312 Mbytes
+achtemp[0] = (-1.00387366710739e+19,-9.9815856421254e+18)
+achtemp[1] = (-1.00578107032611e+19,-9.98139840041474e+18)
+achtemp[2] = (-1.00769357238471e+19,-9.98115517772354e+18)
+********** Time Taken **********= 6.046058359 secs
+Application 18265374 resources: utime ~6s, stime ~0s, Rss ~30120, inblocks ~8258, outblocks ~24192

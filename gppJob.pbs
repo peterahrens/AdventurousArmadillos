@@ -1,6 +1,6 @@
 #!/bin/bash
 #Begin PBS directives for the job
-#PBS -A CSC190PORT
+#PBS -A CSC261
 #PBS -N gppJob
 #PBS -j oe
 #PBS -l walltime=0:30:00,nodes=1
@@ -9,11 +9,11 @@
 
 #What Version of the code are you running : 
 #VER=SEQ
-#VER=OpenMP
+VER=OpenMP
 #VER=MPIOpenMP
 #VER=OpenACC
 #VER=ComplexClass
-VER=Cuda
+#VER=Cuda
 
 smallInput="512 2 512 20"
 num_mpi_ranks=1
@@ -43,7 +43,8 @@ if [ "${VER}" = "Cuda" ]; then
     EXEC=gppCudaVer
 fi
 
-cp /ccs/home/rgayatri/DOE-CSGF/${EXEC}.ex $MEMBERWORK/csc261
+rm $MEMBERWORK/csc261/${EXEC}.ex
+cp /ccs/home/pahrens/AdventurousArmadillos/${EXEC}.ex $MEMBERWORK/csc261
 cd $MEMBERWORK/csc261
 date
 

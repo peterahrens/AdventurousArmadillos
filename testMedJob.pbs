@@ -1,6 +1,6 @@
 #!/bin/bash
 #Begin PBS directives for the job
-#PBS -A CSC190PORT
+#PBS -A CSC261
 #PBS -N GppMedJob
 #PBS -j oe
 #PBS -l walltime=0:30:00,nodes=1
@@ -9,9 +9,9 @@
 
 #What Version of the code are you running : 
 #VER=SEQ
-#VER=OpenMP
+VER=OpenMP
 #VER=MPI
-VER=OpenACC
+#VER=OpenACC
 #VER=ComplexClass
 
 smallInput="512 2 1600 20"
@@ -44,7 +44,7 @@ if [ "${VER}" = "ComplexClass" ]; then
 fi
 
 rm $MEMBERWORK/csc261/${EXEC}.ex
-cp /ccs/home/rgayatri/DOE-CSGF/${EXEC}.ex $MEMBERWORK/csc261
+cp /ccs/home/pahrens/AdventurousArmadillos/${EXEC}.ex $MEMBERWORK/csc261
 cd $MEMBERWORK/csc261
 date
 

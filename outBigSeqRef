@@ -1,0 +1,14 @@
+Wed Jul 18 18:03:27 EDT 2018
+The commands we run are:
+export OMP_NUM_THREADS=1
+aprun -n 1 -d 1 ./gppKerSeq.ex 512 2 3200 20
+*********************************************************************************
+number_bands = 512	 nvband = 2	 ncouls = 3200	 nodes_per_group  = 20	 ngpown = 160	 nend = 3	 nstart = 0	 gamma = 0.5	 sexcut = 4	 limitone = 250000	 limittwo = 0.25
+Size of wtilde_array = 7.8125 Mbytes
+Size of aqsntemp = 25 Mbytes
+Size of I_eps_array array = 7.8125 Mbytes
+achtemp[0] = (-5.13842445834172e+20,-5.12423661308937e+20)
+achtemp[1] = (-5.14315659139572e+20,-5.12421580271217e+20)
+achtemp[2] = (-5.14789457600568e+20,-5.12418893702435e+20)
+********** Time Taken **********= 24.338081075 secs
+Application 18269648 resources: utime ~25s, stime ~0s, Rss ~67872, inblocks ~8258, outblocks ~24192
