@@ -8,8 +8,8 @@
 #End PBS directives and begin shell commands
 
 #What Version of the code are you running : 
-VER=SEQ
-#VER=OpenMP
+#VER=SEQ
+VER=OpenMP
 #VER=MPIOpenMP
 #VER=OpenACC
 #VER=ComplexClass
