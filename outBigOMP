@@ -1,4 +1,4 @@
-Wed Jul 18 18:01:51 EDT 2018
+Thu Jul 19 09:38:24 EDT 2018
 The commands we run are:
 export OMP_NUM_THREADS=16
 aprun -n 1 -d 16 ./gppOpenMP3.ex 512 2 3200 20
@@ -7,8 +7,8 @@ number_bands = 512	 nvband = 2	 ncouls = 3200	 nodes_per_group  = 20	 ngpown = 1
 Size of wtilde_array = 7.8125 Mbytes
 Size of aqsntemp = 25 Mbytes
 Size of I_eps_array array = 7.8125 Mbytes
-achtemp[0] = (-5.13840993653147e+20,-5.1242213313633e+20)
-achtemp[1] = (-5.14314783179922e+20,-5.1242069168991e+20)
-achtemp[2] = (-5.14788216912662e+20,-5.12417610056724e+20)
-********** Time Taken **********= 0.771287126 secs
-Application 18269636 resources: utime ~12s, stime ~0s, Rss ~68132, inblocks ~9045, outblocks ~26253
+achtemp[0] = (-5.1384229135221e+20,-5.12423506310195e+20)
+achtemp[1] = (-5.14315498227047e+20,-5.12421419941267e+20)
+achtemp[2] = (-5.14789244799319e+20,-5.12418682820302e+20)
+********** Time Taken **********= 0.585452953 secs
+Application 18276248 resources: utime ~9s, stime ~1s, Rss ~68132, inblocks ~8988, outblocks ~26075

@@ -287,7 +287,7 @@ int main(int argc, char** argv)
         double achtemp_loc_1_imag = 0;
         double achtemp_loc_2_imag = 0;
         double achtemp_loc_3_imag = 0;
-        #pragma omp parallel for schedule(guided) private(scht,ssxt,ssx_array,sch_array) reduction(+:acht_n1_loc_loc_real, achtemp_loc_0_real, achtemp_loc_1_real, achtemp_loc_2_real, achtemp_loc_3_real, acht_n1_loc_loc_imag, achtemp_loc_0_imag, achtemp_loc_1_imag, achtemp_loc_2_imag, achtemp_loc_3_imag)
+        #pragma omp parallel for schedule(static) private(scht,ssxt,ssx_array,sch_array) reduction(+:acht_n1_loc_loc_real, achtemp_loc_0_real, achtemp_loc_1_real, achtemp_loc_2_real, achtemp_loc_3_real, acht_n1_loc_loc_imag, achtemp_loc_0_imag, achtemp_loc_1_imag, achtemp_loc_2_imag, achtemp_loc_3_imag)
         for(int my_igp=0; my_igp<ngpown; ++my_igp)
         {
             int igp = inv_igp_index[my_igp];
@@ -332,16 +332,16 @@ int main(int argc, char** argv)
             std::complex<double> achtemp_loc_1 = sch_array[1] * vcoul[igp];
             std::complex<double> achtemp_loc_2 = sch_array[2] * vcoul[igp];
             std::complex<double> achtemp_loc_3 = sch_array[3] * vcoul[igp];
-            acht_n1_loc_loc_real = std::real(acht_n1_loc_loc);
-            achtemp_loc_0_real = std::real(achtemp_loc_0);
-            achtemp_loc_1_real = std::real(achtemp_loc_1);
-            achtemp_loc_2_real = std::real(achtemp_loc_2);
-            achtemp_loc_3_real = std::real(achtemp_loc_3);
-            acht_n1_loc_loc_imag = std::imag(acht_n1_loc_loc);
-            achtemp_loc_0_imag = std::imag(achtemp_loc_0);
-            achtemp_loc_1_imag = std::imag(achtemp_loc_1);
-            achtemp_loc_2_imag = std::imag(achtemp_loc_2);
-            achtemp_loc_3_imag = std::imag(achtemp_loc_3);
+            acht_n1_loc_loc_real += std::real(acht_n1_loc_loc);
+            achtemp_loc_0_real += std::real(achtemp_loc_0);
+            achtemp_loc_1_real += std::real(achtemp_loc_1);
+            achtemp_loc_2_real += std::real(achtemp_loc_2);
+            achtemp_loc_3_real += std::real(achtemp_loc_3);
+            acht_n1_loc_loc_imag += std::imag(acht_n1_loc_loc);
+            achtemp_loc_0_imag += std::imag(achtemp_loc_0);
+            achtemp_loc_1_imag += std::imag(achtemp_loc_1);
+            achtemp_loc_2_imag += std::imag(achtemp_loc_2);
+            achtemp_loc_3_imag += std::imag(achtemp_loc_3);
         }
         achtemp[0] += std::complex<double>(achtemp_loc_0_real, achtemp_loc_0_imag);
         achtemp[1] += std::complex<double>(achtemp_loc_1_real, achtemp_loc_1_imag);
